@@ -1,6 +1,7 @@
 #include <Rcpp.h>
 using namespace Rcpp;
 
+// [[Rcpp::export]]
 double my_function_A_cpp(NumericVector x) {
   int n = x.size();
   if (n < 2) {
@@ -17,6 +18,7 @@ double my_function_A_cpp(NumericVector x) {
   return sum_sq_diff / n;
 }
 
+// [[Rcpp::export]]
 double my_function_B_cpp(NumericVector x) {
   int n = x.size();
   if (n < 1) {
