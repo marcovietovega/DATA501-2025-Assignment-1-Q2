@@ -4,13 +4,13 @@ This R package calculates statistics using C++ functions for DATA501 Assignment 
 
 ## How to install
 
-You need the devtools package installed Then you have two options:
+You need the devtools package installed then you have two options:
 
 **Option 1: Install directly from GitHub**
 
 ```r
-devtools::install_github("marcovietovega/DATA501-2025-Assignment-1-Q2",
-                        subdir = "DATA5012025Assignment1Q2")
+# Install with vignettes
+devtools::install_github("marcovietovega/DATA501-2025-Assignment-1-Q2", subdir = "DATA5012025Assignment1Q2", build_vignettes = TRUE)
 ```
 
 **Option 2: Clone and install locally**
@@ -23,7 +23,8 @@ cd DATA501-2025-Assignment-1-Q2/DATA5012025Assignment1Q2
 Then in R:
 
 ```r
-devtools::install()
+# Install package and vignette
+devtools::install(build_vignettes = TRUE)
 ```
 
 ## How to use
