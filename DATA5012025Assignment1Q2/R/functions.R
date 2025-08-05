@@ -1,4 +1,8 @@
 
+#' @useDynLib DATA5012025Assignment1Q2, .registration = TRUE
+#' @importFrom Rcpp sourceCpp
+NULL
+
 my_function_A <- function(x) {
   if (!is.numeric(x)) {
     stop("Input must be numeric")
@@ -21,6 +25,8 @@ my_function_B <- function(x) {
 #'
 #' @param filename Path to the CSV file containing the dataset.
 #' @param student_number Student number to add to the data (default: 255).
+#' @importFrom utils read.csv
+#' @importFrom stats var
 #' @export
 calculate_statistics <- function(filename = "Data501_Dataset_Assignment1.csv", student_number = 255) {
   sample2 <- read.csv(filename) + student_number
